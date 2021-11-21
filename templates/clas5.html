@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Class5 {% endblock title %}
+{% block body %} 
+
+
+<h4 class="text-center" >Class 5</h4>
+<div class="container-fluid py-4 not">
+
+    
+ {% for c in c5 %}
+    <div class="card py-4 my-2" style="width: 20rem;">
+
+        <div class="card-body">
+            <h5 class="card-title">{{ c.title }}</h5>
+            <a href="media/{{ c.pdf }}"> <button type="button" class="btn btn-secondary">View Notice</button></a>
+            <h5 class="card-title">{{ c.date }}</h5>
+
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+
+
+  </div>
+{% endblock body %}

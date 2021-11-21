@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Class {% endblock title %}
+{% block body %} 
+
+<h2 class="text-center" >Welcome {{request.user}}</h2>
+<div class="container-fluid py-4 not">
+<a href="clas5"><button type="button" class="btn btn-primary" >Go To Class5</button></a>
+<a href="clas6"><button type="button" class="btn btn-primary" >Go To Class6</button></a>
+<a href="clas7"><button type="button" class="btn btn-primary" >Go To Class7</button></a>
+<a href="clas8"><button type="button" class="btn btn-primary" >Go To Class8</button></a>
+<a href="clas9"><button type="button" class="btn btn-primary" >Go To Class9</button></a>
+<a href="clas10"><button type="button" class="btn btn-primary" >Go To Class10</button></a>
+
+
+
+
+
+
+
+<a href="logoutuser"><button type="button" class="btn btn-primary" >Logout</button></a>
+</div>
+{% endblock body %}
