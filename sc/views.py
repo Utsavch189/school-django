@@ -27,7 +27,8 @@ def notice(request):
     return render(request,'notice.html',{'noti': noti})
 
 
-
+def contact(request):
+    return render(request, 'contact.html')
 
 
 
@@ -50,7 +51,7 @@ def clas5(request):
     return render(request,'clas5.html',{'c5':c5})
 
 def clas6(request):
-    c6=class7.objects.all()
+    c6=class6.objects.all()
     return render(request,'clas6.html',{'c6':c6})
 
 def clas7(request):

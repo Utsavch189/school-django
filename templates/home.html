@@ -1,79 +1,57 @@
-{% extends 'base.html' %}
-
-{% block title %} Home {% endblock title %}
-{% block body %}
-{% for message in messages %}
+{% extends 'base.html' %} {% block title %} Home {% endblock title %} {% block body %} {% for message in messages %}
 
 <div class="alert alert-success alert-{{ message.tags }}" role="alert">
     <strong>Message-</strong> {{ message }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {% endfor %}
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="height: 700px" >
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="700">
-      <img src="./static/school1.jpg" style="height: 650px" class="d-block w-100" alt="...">
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="height: 700px">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="700">
+            <img src="./static/school1.jpg" style="height: 650px" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="./static/school2.jpg" style="height: 650px" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="./static/school3.jpg" style="height: 650px" class="d-block w-100" alt="...">
+        </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="./static/school2.jpg" style="height: 650px"  class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./static/school3.jpg" style="height: 650px" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
 <div class="container py-4 ">
 
-        <h1 class="text-center">You can Contact US</h1>
-        <form method="POST" action="/">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="formFile" class="form-label">NAME</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" aria-label="First name">
-            </div>
-            <div class="form-group">
-                <label for="formFile" class="form-label">EMAIL</label>
-                <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" aria-label="First name">
-            </div>
-            <div class="form-group">
-                <label for="formFile" class="form-label">PHONE</label>
-                <input type="phone" class="form-control" name="phone" id="phone" placeholder="Enter Email" aria-label="First name">
-            </div>
-            <div class="form-group">
-                <label for="formFile" class="form-label">Your Query</label>
-                <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
-            </div>
-            <button class="btn btn-primary my-2" type="submit">Submit</button>
-        </form>
+    <h1 class="text-center">You can Contact US</h1>
+    <form method="POST" action="/">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="formFile" class="form-label">NAME</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" aria-label="First name">
+        </div>
+        <div class="form-group">
+            <label for="formFile" class="form-label">EMAIL</label>
+            <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" aria-label="First name">
+        </div>
+        <div class="form-group">
+            <label for="formFile" class="form-label">PHONE</label>
+            <input type="phone" class="form-control" name="phone" id="phone" placeholder="Enter Email" aria-label="First name">
+        </div>
+        <div class="form-group">
+            <label for="formFile" class="form-label">Your Query</label>
+            <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+        </div>
+        <button class="btn btn-outline-success my-3" type="submit">Submit</button>
+    </form>
 
-    </div>
- <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <!-- <h1><span>S</span>ubham B<span>h</span>attacharjee</h1> -->
-      </div>
-      <h2>Your Complete Web Solution</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a href=" https://www.facebook.com/itsThere4U/"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="https://instagram.com/tech_u_2021?utm_medium=copy_link"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
-        </div>
-       
-      
-      </div>
-      <p>Copyright © 2021 TECH-U. All rights reserved</p>
-    </div>
-  </section>
+</div>
+
 
 
 

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Online Help{% endblock title %}
+{% block body %}
+<div class="container py-4 my-4">
+
+    <h1 class="text-center"> Contact US</h1>
+    <form method="POST" action="/">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="formFile" class="form-label">NAME</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" aria-label="First name">
+        </div>
+        <div class="form-group">
+            <label for="formFile" class="form-label">EMAIL</label>
+            <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" aria-label="First name">
+        </div>
+        <div class="form-group">
+            <label for="formFile" class="form-label">PHONE</label>
+            <input type="phone" class="form-control" name="phone" id="phone" placeholder="Enter Email" aria-label="First name">
+        </div>
+        <div class="form-group">
+            <label for="formFile" class="form-label">Your Query</label>
+            <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary my-3" type="submit">Submit</button>
+    </form>
+
+</div>
+
+{% endblock body %}
